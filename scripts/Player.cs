@@ -94,7 +94,7 @@ public partial class Player : CharacterBody3D
         _model.Rotation = aux;
     }
 
-    private void GameOver()
+    public void GameOver()
     {
         GetTree().ReloadCurrentScene();
     }

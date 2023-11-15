@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://cd0gmhxsgmhf6"]
+
+[ext_resource type="Script" path="res://scripts/Enemy.cs" id="1_6limm"]
+[ext_resource type="ArrayMesh" uid="uid://mvd3ie23bw83" path="res://models/spikeBlock.obj" id="2_52alc"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ua573"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_1wn6n"]
+radius = 0.444057
+
+[node name="Enemy" type="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17108, 0, 0)
+script = ExtResource("1_6limm")
+moveDirection = Vector3(0, 2, 0)
+
+[node name="ModelEnemy" type="MeshInstance3D" parent="."]
+mesh = ExtResource("2_52alc")
+skeleton = NodePath("../..")
+surface_material_override/0 = SubResource("StandardMaterial3D_ua573")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+shape = SubResource("SphereShape3D_1wn6n")
+
+[connection signal="body_entered" from="." to="." method="OnBodyEntered"]
