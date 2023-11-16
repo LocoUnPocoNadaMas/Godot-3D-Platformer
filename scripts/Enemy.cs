@@ -4,8 +4,8 @@ namespace GodotPlatformer3D.scripts;
 
 public partial class Enemy : Godot.Area3D
 {
-	[Export] private float moveSpeed = 2f;
-	[Export] private Vector3 moveDirection = new Vector3();
+	[Export] private float _moveSpeed = 2f;
+	[Export] private Vector3 _moveDirection = new Vector3();
 
 	private Vector3 _startPosition = new Vector3();
 	private Vector3 _targetPosition = new Vector3();
@@ -14,16 +14,16 @@ public partial class Enemy : Godot.Area3D
 	public override void _Ready()
 	{
 		_startPosition = GlobalPosition;
-		_targetPosition = _startPosition + moveDirection;
+		_targetPosition = _startPosition + _moveDirection;
 	}
 
 	// Called every frame. 'delta' is the elapsed time since the previous frame.
 	public override void _Process(double delta)
 	{
-		GlobalPosition = GlobalPosition.MoveToward(_targetPosition, moveSpeed * (float)delta);
+		GlobalPosition = GlobalPosition.MoveToward(_targetPosition, _moveSpeed * (float)delta);
 		if(GlobalPosition == _targetPosition)
 			if (GlobalPosition == _startPosition)
-				_targetPosition = _startPosition + moveDirection;
+				_targetPosition = _startPosition + _moveDirection;
 			else
 				_targetPosition = _startPosition;
 	}
