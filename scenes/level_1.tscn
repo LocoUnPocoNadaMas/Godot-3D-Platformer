@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://dp80vrejdeu88" path="res://prefabs/player.tscn" id="2_fxoso"]
 [ext_resource type="PackedScene" uid="uid://cd0gmhxsgmhf6" path="res://prefabs/enemy.tscn" id="3_qs5rl"]
 [ext_resource type="PackedScene" uid="uid://fd22epwvk536" path="res://prefabs/spikes.tscn" id="4_qby06"]
-[ext_resource type="PackedScene" uid="uid://wf3lhu8q3oip" path="res://prefabs/coin.tscn" id="5_2dski"]
+[ext_resource type="PackedScene" uid="uid://cnxc8ua8oklrm" path="res://prefabs/coin.tscn" id="5_2dski"]
 
 [sub_resource type="Environment" id="Environment_go387"]
 background_mode = 1

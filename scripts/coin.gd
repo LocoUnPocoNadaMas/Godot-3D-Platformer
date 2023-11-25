@@ -7,7 +7,7 @@ extends Area3D
 
 @onready var _startY: float
 	
-signal GiveMeYourMoneyEventHandler(amount: int)
+#signal GiveMeYourMoneyEventHandler(amount: int)
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
