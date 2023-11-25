@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Godot Platformer 3D"
-run/main_scene="res://scenes/level_1.tscn"
+run/main_scene="res://game.tscn"
 config/features=PackedStringArray("4.1", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+
+[autoload]
+
+EventBus="*res://scripts/event_bus.gd"
 
 [dotnet]
 

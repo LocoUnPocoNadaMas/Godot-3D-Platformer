@@ -1,6 +1,6 @@
 [gd_scene load_steps=5 format=3 uid="uid://cd0gmhxsgmhf6"]
 
-[ext_resource type="Script" path="res://scripts/Enemy.cs" id="1_6limm"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_t62kj"]
 [ext_resource type="ArrayMesh" uid="uid://mvd3ie23bw83" path="res://models/spikeBlock.obj" id="2_52alc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ua573"]
@@ -9,8 +9,7 @@
 radius = 0.444057
 
 [node name="Enemy" type="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.17108, 0, 0)
-script = ExtResource("1_6limm")
+script = ExtResource("1_t62kj")
 
 [node name="ModelEnemy" type="MeshInstance3D" parent="."]
 mesh = ExtResource("2_52alc")
