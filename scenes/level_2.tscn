@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck75lf3icjdlu"]
+[gd_scene load_steps=9 format=3 uid="uid://b1p7vum6c8s1"]
 
 [ext_resource type="PackedScene" uid="uid://dp80vrejdeu88" path="res://prefabs/player.tscn" id="1_iicbd"]
 [ext_resource type="PackedScene" uid="uid://cd0gmhxsgmhf6" path="res://prefabs/enemy.tscn" id="2_s5j0k"]
@@ -18,7 +18,7 @@ func _on_body_entered(_body):
 	EventBus.ChangeLevelEventHandler.emit(\"level_3.tscn\")
 "
 
-[node name="Level1" type="Node3D"]
+[node name="Level2" type="Node3D"]
 
 [node name="Player" parent="." instance=ExtResource("1_iicbd")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)

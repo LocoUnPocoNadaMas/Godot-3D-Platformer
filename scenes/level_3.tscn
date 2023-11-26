@@ -1,11 +1,13 @@
-[gd_scene load_steps=2 format=3 uid="uid://ciyfa28bpb5n2"]
+[gd_scene load_steps=2 format=3 uid="uid://cygqi3jcqorl"]
 
-[ext_resource type="Texture2D" uid="uid://d0p1uiewc8vm1" path="res://models/background.png" id="1_ychlq"]
+[ext_resource type="Texture2D" path="res://models/background.png" id="1_ychlq"]
 
 [node name="level_3" type="Node2D"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+clip_contents = true
+offset_right = 326.0
+offset_bottom = 338.0
+size_flags_vertical = 3
 texture = ExtResource("1_ychlq")
 expand_mode = 2
