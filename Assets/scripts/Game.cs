@@ -41,6 +41,7 @@ public partial class Game : Node
 	{
 		_currentScore += amount;
 		GD.PrintErr(_currentScore);
+		_eventBus.EmitSignal(EventBus.SignalName.UpdateLabelScore, _currentScore);
 	}
 	
 	private void GotoScene(string path)
@@ -83,8 +84,8 @@ public partial class Game : Node
 		
 		// Remove old Children
 		var levelNode = GetNode<Node3D>("Level");
-		if (levelNode.GetChildCount() > 0)
-			levelNode.RemoveChild(levelNode.GetChild(0));
+		if (levelNode.GetChildCount() > 1)
+			levelNode.RemoveChild(levelNode.GetChild(1));
 		// Add it to the active scene, as child of Level.
 		levelNode.AddChild(_currentScene);
 	}
