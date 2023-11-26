@@ -1,22 +1,15 @@
-[gd_scene load_steps=9 format=3 uid="uid://ck75lf3icjdlu"]
+[gd_scene load_steps=8 format=3 uid="uid://ck75lf3icjdlu"]
 
-[ext_resource type="PackedScene" uid="uid://dp80vrejdeu88" path="res://prefabs/player.tscn" id="1_iicbd"]
-[ext_resource type="PackedScene" uid="uid://cd0gmhxsgmhf6" path="res://prefabs/enemy.tscn" id="2_s5j0k"]
-[ext_resource type="PackedScene" uid="uid://cijxxf3tubntu" path="res://prefabs/platform_large.tscn" id="3_0nb52"]
-[ext_resource type="PackedScene" uid="uid://fd22epwvk536" path="res://prefabs/spikes.tscn" id="4_n66oj"]
-[ext_resource type="PackedScene" uid="uid://wf3lhu8q3oip" path="res://prefabs/coin.tscn" id="5_y1lcw"]
-[ext_resource type="PackedScene" uid="uid://84bilmrd6blb" path="res://prefabs/end_flag.tscn" id="6_waiyn"]
+[ext_resource type="PackedScene" uid="uid://dp80vrejdeu88" path="res://Assets/prefabs/player.tscn" id="1_iicbd"]
+[ext_resource type="PackedScene" uid="uid://cd0gmhxsgmhf6" path="res://Assets/prefabs/enemy.tscn" id="2_s5j0k"]
+[ext_resource type="PackedScene" uid="uid://cijxxf3tubntu" path="res://Assets/prefabs/platform_large.tscn" id="3_0nb52"]
+[ext_resource type="PackedScene" uid="uid://fd22epwvk536" path="res://Assets/prefabs/spikes.tscn" id="4_n66oj"]
+[ext_resource type="PackedScene" uid="uid://cnxc8ua8oklrm" path="res://Assets/prefabs/coin.tscn" id="5_y1lcw"]
+[ext_resource type="PackedScene" uid="uid://84bilmrd6blb" path="res://Assets/prefabs/end_flag.tscn" id="6_waiyn"]
 
 [sub_resource type="Environment" id="Environment_jialu"]
 background_mode = 1
 background_color = Color(0.352941, 0.180392, 0.180392, 1)
-
-[sub_resource type="GDScript" id="GDScript_fymle"]
-script/source = "extends Area3D
-
-func _on_body_entered(_body):
-	EventBus.ChangeLevelEventHandler.emit(\"level_3.tscn\")
-"
 
 [node name="Level1" type="Node3D"]
 
@@ -119,4 +112,3 @@ environment = SubResource("Environment_jialu")
 
 [node name="EndFlag" parent="." instance=ExtResource("6_waiyn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 2, 0)
-script = SubResource("GDScript_fymle")

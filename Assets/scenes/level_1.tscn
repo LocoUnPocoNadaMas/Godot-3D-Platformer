@@ -1,19 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://chs18vnqjv8c0"]
 
-<<<<<<< HEAD:Assets/scenes/level_1.tscn
 [ext_resource type="PackedScene" uid="uid://cijxxf3tubntu" path="res://Assets/prefabs/platform_large.tscn" id="1_m62ox"]
 [ext_resource type="PackedScene" uid="uid://dp80vrejdeu88" path="res://Assets/prefabs/player.tscn" id="2_fxoso"]
 [ext_resource type="PackedScene" uid="uid://cd0gmhxsgmhf6" path="res://Assets/prefabs/enemy.tscn" id="3_qs5rl"]
 [ext_resource type="PackedScene" uid="uid://fd22epwvk536" path="res://Assets/prefabs/spikes.tscn" id="4_qby06"]
 [ext_resource type="PackedScene" uid="uid://cnxc8ua8oklrm" path="res://Assets/prefabs/coin.tscn" id="5_2dski"]
-=======
-[ext_resource type="PackedScene" uid="uid://cijxxf3tubntu" path="res://prefabs/platform_large.tscn" id="1_m62ox"]
-[ext_resource type="PackedScene" uid="uid://dp80vrejdeu88" path="res://prefabs/player.tscn" id="2_fxoso"]
-[ext_resource type="PackedScene" uid="uid://cd0gmhxsgmhf6" path="res://prefabs/enemy.tscn" id="3_qs5rl"]
-[ext_resource type="PackedScene" uid="uid://fd22epwvk536" path="res://prefabs/spikes.tscn" id="4_qby06"]
-[ext_resource type="PackedScene" uid="uid://wf3lhu8q3oip" path="res://prefabs/coin.tscn" id="5_2dski"]
-[ext_resource type="PackedScene" uid="uid://84bilmrd6blb" path="res://prefabs/end_flag.tscn" id="6_r8x2j"]
->>>>>>> prefabs:scenes/level_1.tscn
+[ext_resource type="PackedScene" uid="uid://84bilmrd6blb" path="res://Assets/prefabs/end_flag.tscn" id="6_r8x2j"]
 
 [sub_resource type="Environment" id="Environment_go387"]
 background_mode = 1

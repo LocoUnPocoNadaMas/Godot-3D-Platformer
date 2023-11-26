@@ -20,6 +20,7 @@ public partial class Game : Node
 		_eventBus = GetNode<EventBus>("/root/EventBus");
 		_eventBus.UpdateMainScore += CoinOnGiveMeYourMoney;
 		_eventBus.Restart += OnRestart;
+		_eventBus.ChangeLevel += GotoScene;
 	}
 
 	private void OnRestart()
