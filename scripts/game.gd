@@ -54,6 +54,6 @@ func LoadingScene(path: String):
 	_currentScene = s.instantiate()
 	
 	var levelNode = get_node("Level")
-	if levelNode.get_child_count() > 0:
-		levelNode.remove_child(levelNode.get_child(0))
+	if levelNode.get_child_count() > 1:
+		levelNode.remove_child(levelNode.get_child(1))
 	levelNode.add_child(_currentScene)
