@@ -1,8 +1,11 @@
-[gd_scene load_steps=2 format=3 uid="uid://bq483sxcghyi0"]
+[gd_scene load_steps=3 format=3 uid="uid://ch1556ciukypo"]
 
-[ext_resource type="Script" path="res://Assets/scripts/Game.cs" id="1_4dhv4"]
+[ext_resource type="Script" path="res://Assets/scripts/Game.cs" id="1_n3txs"]
+[ext_resource type="PackedScene" uid="uid://hw6uf4fcyen7" path="res://Assets/prefabs/hub.tscn" id="2_i60rx"]
 
 [node name="Game" type="Node"]
-script = ExtResource("1_4dhv4")
+script = ExtResource("1_n3txs")
 
 [node name="Level" type="Node3D" parent="."]
+
+[node name="Hub" parent="Level" instance=ExtResource("2_i60rx")]
