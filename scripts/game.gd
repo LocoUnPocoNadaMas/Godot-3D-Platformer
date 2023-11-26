@@ -16,7 +16,8 @@ func _ready():
 
 func CoinOnGiveMeYourMoney(amount: int):
 	_currentScore += amount
-	printerr(_currentScore)
+	#printerr(_currentScore)
+	EventBus.UpdateLabelScore.emit(_currentScore)
 
 func Restart():
 	#// Rollback score
