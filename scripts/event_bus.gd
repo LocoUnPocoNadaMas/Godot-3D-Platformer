@@ -1,6 +1,8 @@
 extends Node
 
-signal UpdateScoreEventHandler(amount: int)
+signal UpdateMainScore(amount: int)
+
+signal UpdateLabelScore(amount: int)
 
 signal ChangeLevelEventHandler(level: String)
 

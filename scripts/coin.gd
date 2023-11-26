@@ -5,9 +5,7 @@ extends Area3D
 @export var _bobSpeed: float = 5.0
 @export var _time: float = 0.0
 
-@onready var _startY: float
-	
-signal GiveMeYourMoneyEventHandler(amount: int)
+var _startY: float
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -27,5 +25,5 @@ func OnBodyEntered(body: Node3D):
 	#//bodyInstance.AddScore(1);
 	if body.is_in_group(""):
 		pass
-	EventBus.UpdateScoreEventHandler.emit(1)
+	EventBus.UpdateMainScore.emit(1)
 	queue_free()

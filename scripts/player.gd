@@ -60,4 +60,5 @@ func Fall(delta: float):
 		GameOver()
 	
 func GameOver():
-	get_tree().reload_current_scene()
+	#get_tree().reload_current_scene()
+	EventBus.RestartEventHandler.emit()
