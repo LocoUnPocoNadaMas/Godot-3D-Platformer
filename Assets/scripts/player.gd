@@ -9,9 +9,6 @@ var _facingAngle: float = 0.0
 
 var _model: MeshInstance3D
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/3d/default_gravity")
-
 func _ready():
 	_model = get_node("ModelPlayer")
 

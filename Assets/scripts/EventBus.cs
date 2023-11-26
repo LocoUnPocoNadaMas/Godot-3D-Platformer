@@ -1,11 +1,14 @@
 using Godot;
 
-namespace GodotPlatformer3D.scripts;
+namespace GodotPlatformer3D.Assets.scripts;
 
 public partial class EventBus : Node
 {
 	[Signal]
-	public delegate void UpdateScoreEventHandler(int amount);
+	public delegate void UpdateMainScoreEventHandler(int amount);
+	
+	[Signal]
+	public delegate void UpdateLabelScoreEventHandler(int amount);
 
 	[Signal]
 	public delegate void ChangeLevelEventHandler(string level);

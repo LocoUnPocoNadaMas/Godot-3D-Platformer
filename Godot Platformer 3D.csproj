@@ -4,8 +4,4 @@
     <EnableDynamicLoading>true</EnableDynamicLoading>
     <RootNamespace>GodotPlatformer3D</RootNamespace>
   </PropertyGroup>
-  <ItemGroup>
-    <Folder Include="prefabs\" />
-    <Folder Include="scenes\" />
-  </ItemGroup>
 </Project>

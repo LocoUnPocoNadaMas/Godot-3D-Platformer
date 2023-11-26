@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://cd0gmhxsgmhf6"]
 
-[ext_resource type="Script" path="res://scripts/Enemy.cs" id="1_6limm"]
-[ext_resource type="ArrayMesh" uid="uid://mvd3ie23bw83" path="res://models/spikeBlock.obj" id="2_52alc"]
+[ext_resource type="Script" path="res://Assets/scripts/Enemy.cs" id="1_6limm"]
+[ext_resource type="ArrayMesh" uid="uid://mvd3ie23bw83" path="res://Assets/models/spikeBlock.obj" id="2_52alc"]
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ua573"]
 

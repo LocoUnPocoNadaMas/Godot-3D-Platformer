@@ -1,16 +1,16 @@
 [gd_scene load_steps=4 format=3 uid="uid://fd22epwvk536"]
 
-[ext_resource type="Script" path="res://scripts/Spikes.cs" id="1_huej5"]
-[ext_resource type="ArrayMesh" uid="uid://ckhit4w6oius4" path="res://models/spikesLarge.obj" id="2_hi8h6"]
+[ext_resource type="Script" path="res://Assets/scripts/Spikes.cs" id="1_t0vsd"]
+[ext_resource type="ArrayMesh" uid="uid://ckhit4w6oius4" path="res://Assets/models/spikesLarge.obj" id="2_8h72a"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_ywk7q"]
 size = Vector3(2, 1.08, 2)
 
 [node name="Spikes" type="Area3D"]
-script = ExtResource("1_huej5")
+script = ExtResource("1_t0vsd")
 
 [node name="ModelSpikes" type="MeshInstance3D" parent="."]
-mesh = ExtResource("2_hi8h6")
+mesh = ExtResource("2_8h72a")
 skeleton = NodePath("../..")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]

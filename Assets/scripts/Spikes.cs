@@ -1,6 +1,6 @@
 using Godot;
 
-namespace GodotPlatformer3D.scripts;
+namespace GodotPlatformer3D.Assets.scripts;
 
 public partial class Spikes : Area3D
 {

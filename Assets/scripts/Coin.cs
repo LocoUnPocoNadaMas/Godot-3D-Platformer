@@ -1,6 +1,6 @@
 using Godot;
 
-namespace GodotPlatformer3D.scripts;
+namespace GodotPlatformer3D.Assets.scripts;
 
 public partial class Coin : Area3D
 {
@@ -10,13 +10,13 @@ public partial class Coin : Area3D
     [Export] private float _time;
 
     [Export] private float _startY;
-    private EventBus eb;
+    private EventBus _eventBus;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
         _startY = GlobalPosition.Y;
-        eb = GetNode<EventBus>("/root/EventBus");
+        _eventBus = GetNode<EventBus>("/root/EventBus");
     }
 
     // Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -35,7 +35,7 @@ public partial class Coin : Area3D
     private void OnBodyEntered(Node3D body)
     {
         if (body is not Player bodyInstance) return;
-        eb.EmitSignal(EventBus.SignalName.UpdateScore, 1);
+        _eventBus.EmitSignal(EventBus.SignalName.UpdateMainScore, 1);
         QueueFree();
     }
 }

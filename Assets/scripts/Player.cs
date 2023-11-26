@@ -1,6 +1,6 @@
 using Godot;
 
-namespace GodotPlatformer3D.scripts;
+namespace GodotPlatformer3D.Assets.scripts;
 
 public partial class Player : CharacterBody3D
 {
@@ -11,10 +11,12 @@ public partial class Player : CharacterBody3D
 	private float _facingAngle;
 
 	private MeshInstance3D _model;
+	private EventBus _eb;
 
 	public override void _Ready()
 	{
 		_model = GetNode<MeshInstance3D>("ModelPlayer");
+		_eb = GetNode<EventBus>("/root/EventBus");
 	}
 
 	public override void _PhysicsProcess(double delta)
@@ -44,7 +46,8 @@ public partial class Player : CharacterBody3D
 
 	public void GameOver()
 	{
-		GetTree().ReloadCurrentScene();
+		//GetTree().ReloadCurrentScene();
+		_eb.EmitSignal(EventBus.SignalName.Restart);
 	}
 
 	private void Jump()
