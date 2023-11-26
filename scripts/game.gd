@@ -27,6 +27,7 @@ func Restart():
 	EventBus.UpdateLabelScore.emit(_currentScore)
 	
 func GotoScene(path):
+	# Save score
 	_score = _currentScore
 	# This function will usually be called from a signal callback,
 	# or some other function in the current scene.
@@ -38,7 +39,6 @@ func GotoScene(path):
 	# we can be sure that no code from the current scene is running:
 
 	call_deferred("_deferred_goto_scene", path)
-
 
 func _deferred_goto_scene(path):
 	# It is now safe to remove the current scene
