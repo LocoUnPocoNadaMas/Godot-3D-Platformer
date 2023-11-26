@@ -12,7 +12,7 @@ func _ready():
 	LoadingScene("level_1.tscn")
 	EventBus.UpdateMainScore.connect(CoinOnGiveMeYourMoney)
 	EventBus.RestartEventHandler.connect(Restart)
-	#EventBus.ChangeLevelEventHandler.connect(ChangeLevel)
+	EventBus.ChangeLevelEventHandler.connect(GotoScene)
 
 func CoinOnGiveMeYourMoney(amount: int):
 	_currentScore += amount
